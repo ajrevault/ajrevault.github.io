@@ -113,6 +113,33 @@ Policymaking</a>
 
     </section>
 
+    <section>
+        <div class="chart-description">
+            <h2>Week 2: Chart 2</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Time series data from FRED on diesel prices in the US. 
+            </p>
+        </div>
+
+        <!-- This element will contain our vega-lite chart -->
+        <figure id="Location4"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+    </section>
+
+
+    <section>
+        <div class="chart-description">
+            <h2>Week 3: Chart 1</h2>
+            <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
+                Time series of Price to Earnings ratio. I changed the line color and width, as well as the font of the title and font color of the subtitle.
+            </p>
+        </div>
+
+        <!-- This element will contain our vega-lite chart -->
+        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+
+    </section>
+
     <!-- Do you want to add more sections? -->
         <!-- Try copying pasting the section above -->
         <!-- You'll need to change the id of the figure "<figure id="Location2"... -->
@@ -143,6 +170,14 @@ Policymaking</a>
         let figure_3_spec = "FREDweek2.json"; 
 
         vegaEmbed('#Location3', figure_3_spec)
+
+        let figure_4_spec = 'diesel_prices'
+
+        vegaEmbed('#Location4', figure_4_spec)
+
+                let figure_5_spec = 'pe_ratio_chart.json'
+
+        vegaEmbed('#Location5', figure_4_spec)
 
     </script>
 
