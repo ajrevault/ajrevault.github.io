@@ -14,7 +14,7 @@
     "x": {
       "field": "date",
       "type": "temporal",
-      "axis": {"title": "Year", "titleColor": "#26ab45", "gridColor": "#e3e9f8"}
+      "axis": {"title": "Year", "titleColor": "#26ab45", "grid": false}
     },
     "y": {
       "field": "value",
