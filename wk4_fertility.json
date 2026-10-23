@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://api.worldbank.org/v2/country/fra/indicator/SP.DYN.TFRT.IN?format=json&per_page=1000",
+    "url": "https://api.worldbank.org/v2/country/fra;usa/indicator/SP.DYN.TFRT.IN?format=json&per_page=1000",
     "format": {"type": "json", "property": "[1]"}
   },
   "title": {
@@ -17,7 +17,8 @@
   "mark": {"type": "line", "color": "seagreen", "strokeWidth": 2, "opacity": 1},
   "encoding": {
     "x": {"field": "date", "type": "temporal", "title": null},
-    "y": {"field": "value", "type": "quantitative", "title": null}
+    "y": {"field": "value", "type": "quantitative", "title": null},
+    "color": {"field": "countryiso3code", "type": "nominal", "title": null}
   },
   "config": {}
 }
