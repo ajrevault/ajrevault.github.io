@@ -1,0 +1,28 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ajrevault/ajrevault.github.io/refs/heads/main/wk3_france_debt.csv",
+    "format": {"type": "csv"}
+  },
+  "title": {
+    "text": "France government annual deficit as a percentage of GDP",
+    "subtitle": "Source of data: Eurostat",
+    "subtitleFontStyle": "italic",
+    "subtitleFontSize": 10,
+    "anchor": "start",
+    "color": "black"
+  },
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "darkred", "strokeWidth": 2, "opacity": 1},
+  "encoding": {
+    "x": {
+      "field": "TIME_PERIOD",
+      "type": "temporal",
+      "timeUnit": "year",
+      "title": ""
+    },
+    "y": {"field": "deficit_value", "type": "quantitative", "title": ""}
+  },
+  "config": {}
+}
