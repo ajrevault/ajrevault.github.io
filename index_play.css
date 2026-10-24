@@ -90,7 +90,7 @@ img {
 }
 
 /* Charts in a row */
-.chart-row {
+/*.chart-row {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
