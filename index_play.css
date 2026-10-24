@@ -88,3 +88,10 @@ img {
   color: #fff; 
   text-decoration: none;
 }
+
+/* Charts in a row */
+.chart-row {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+}
