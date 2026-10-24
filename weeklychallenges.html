@@ -114,14 +114,17 @@ Policymaking</a>
     <section>
         <div class="chart-description">
             <h2>Week 3</h2>
-            <h3>Chart 1: Price to Earnings Ratio, S&P Composite</h3>
+            <h3>Policy debate: France's Public Debt Struggles</h3>
             <p> <!-- This is a paragraph, it's the main way to display text on a web page -->
-                Time series of Price to Earnings ratio. I changed the line color and width, as well as the font of the title and font color of the subtitle.
+                France's public debt and deficit have now largely exceeded EU legal thresholds. Debt sat at 115.7% of GDP in 2025, nearly twice the 60% limit, while deficit reached 5.1%, also well above the 3% limit. While these numbers support a policy of fiscal consolidation, political disagreement on the best consolidation package, especially ahead of the 2027 presidential election, is likely to make any legislative agreement difficult.  
             </p>
         </div>
 
         <!-- This element will contain our vega-lite chart -->
-        <figure id="Location5"></figure> <!-- we give it an id so we can put a vega-lite graph here with VegaEmbed -->
+        <div class="chart-row">
+            <figure id="Location5"></figure>
+            <figure id="Location6"></figure>
+        </div>
 
     </section>
 
@@ -160,9 +163,13 @@ Policymaking</a>
 
         vegaEmbed('#Location4', figure_4_spec)
 
-        let figure_5_spec = 'pe_ratio_chart.json';
+        let figure_5_spec = 'wk3_fr_debt.json';
 
         vegaEmbed('#Location5', figure_5_spec)
+        
+        let figure_6_spec = 'wk3_fr_deficit.json';
+
+        vegaEmbed('#Location6', figure_6_spec)
 
     </script>
 
