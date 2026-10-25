@@ -94,4 +94,9 @@ img {
     display: flex;
     gap: 20px;
     flex-wrap: wrap;
+}*/
+
+#Location7 img {
+  width: 440px;
+  max-width: none;
 }
