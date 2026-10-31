@@ -10,7 +10,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/series_a.json",
+        "url": "data/wk5_bls_social.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
@@ -24,7 +24,7 @@
     },
     {
       "data": {
-        "url": "data/series_b.json",
+        "url": "data/wk5_bls_house.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
