@@ -14,7 +14,7 @@ jobs:
         env:
           BLS_KEY: ${{ secrets.BLS_KEY }}
         run: |
-          mkdir -p data
+          mkdir -p data/portfolio
           for pair in "wk5_bls_social:TUU10101AA01013951" "wk5_bls_house:TUU10101AA01001102"; do
             name="${pair%%:*}"; id="${pair##*:}"
             curl -s "https://api.bls.gov/publicAPI/v2/timeseries/data/${id}?startyear=2006&endyear=2025&registrationkey=${BLS_KEY}" -o "tmp_${name}.json"
