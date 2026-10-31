@@ -19,7 +19,7 @@ jobs:
             name="${pair%%:*}"; id="${pair##*:}"
             curl -s "https://api.bls.gov/publicAPI/v2/timeseries/data/${id}?startyear=2006&endyear=2025&registrationkey=${BLS_KEY}" -o "tmp_${name}.json"
             if jq -e '.status=="REQUEST_SUCCEEDED"' "tmp_${name}.json" > /dev/null; then
-              mv "tmp_${name}.json" "data/${name}.json"
+              mv "tmp_${name}.json" "data/portfolio/${name}.json"
             else
               echo "Request failed for ${id}"; cat "tmp_${name}.json"
             fi
