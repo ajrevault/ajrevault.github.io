@@ -1,0 +1,35 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ajrevault/ajrevault.github.io/refs/heads/main/CPI-confectionery.csv"
+  },
+  "title": {
+    "text": [
+      "Harmonized Index of Consumer Prices for", "Sugar, Jam, Honey, Chocolate and Confectionery"
+    ],
+    "subtitle": [
+      "United Kingdom, Index 2015 = 100 | Source: Eurostat via FRED®"
+    ]
+  },
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "blue"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": "Year", "titleColor": "#26ab45", "gridColor": "#e3e9f8"}
+    },
+    "y": {
+      "field": "value",
+      "scale": {"zero": false},
+      "axis": {
+        "title": "Index 2015 = 100",
+        "titleColor": "#26ab45",
+        "gridColor": "#e3e9f8"
+      },
+      "type": "quantitative"
+    }
+  },
+  "config": {}
+}

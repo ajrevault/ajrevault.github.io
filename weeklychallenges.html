@@ -120,7 +120,7 @@ Policymaking</a>
         <!-- This element will contain our vega-lite chart -->
         <div class="chart-row" style="display: flex; gap: 5px;">
             <figure id="Location7">
-                <img src="wk4_ftgraph.png" alt="Financial time chart of global monthly temperature, 1940-2026" width="700">
+                <img src="data/portoliof/wk4_ftgraph.png" alt="Financial time chart of global monthly temperature, 1940-2026" width="700">
             </figure>
             
             <figure id="Location8"></figure>
@@ -159,10 +159,10 @@ Policymaking</a>
         // You should have a spec for a graph in this same folder. Just specify its name here, e.g. let figure_1_spec = "chart1.json"
         vegaEmbed('#Location2', figure_2_spec)
 
-        let figure_3_spec = "data/portfolio/FREDweek2.json"; 
+        let figure_3_spec = "data/portfolio/wk2_FRED.json"; 
         vegaEmbed('#Location3', figure_3_spec)
 
-        let figure_4_spec = 'data/portfolio/diesel_prices.json';
+        let figure_4_spec = 'data/portfolio/wk2_diesel_prices.json';
         vegaEmbed('#Location4', figure_4_spec)
 
         let figure_5_spec = 'data/portfolio/wk3_fr_debt.json';

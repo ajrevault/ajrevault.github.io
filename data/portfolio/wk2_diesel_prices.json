@@ -1,0 +1,31 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "data": {
+    "url": "https://raw.githubusercontent.com/ajrevault/ajrevault.github.io/refs/heads/main/diesel-prices.csv"
+  },
+  "title": {
+    "text": ["Diesel Prices in the United States"],
+    "subtitle": ["Dollars per gallon, not seasonally adjusted | Source: FRED®"]
+  },
+  "width": 300,
+  "height": 300,
+  "mark": {"type": "line", "color": "blue"},
+  "encoding": {
+    "x": {
+      "field": "date",
+      "type": "temporal",
+      "axis": {"title": "Year", "titleColor": "#26ab45", "grid": false}
+    },
+    "y": {
+      "field": "value",
+      "scale": {"zero": false},
+      "axis": {
+        "title": "Price",
+        "titleColor": "#26ab45",
+        "gridColor": "#e3e9f8"
+      },
+      "type": "quantitative"
+    }
+  },
+  "config": {}
+}
