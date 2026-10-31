@@ -1,7 +1,7 @@
 {
   "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
   "data": {
-    "url": "https://raw.githubusercontent.com/ajrevault/ajrevault.github.io/refs/heads/main/wk3_france_debt.csv",
+    "url": "https://raw.githubusercontent.com/ajrevault/ajrevault.github.io/refs/heads/main/data/portfolio/wk3_france_debt.csv",
     "format": {"type": "csv"}
   },
   "title": {

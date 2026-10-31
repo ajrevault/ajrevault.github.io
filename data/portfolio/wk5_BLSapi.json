@@ -10,7 +10,7 @@
   "layer": [
     {
       "data": {
-        "url": "data/wk5_bls_social.json",
+        "url": "data/potfolio/wk5_bls_social.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
