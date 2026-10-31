@@ -1,0 +1,79 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": {
+    "text": ["Housework below socializing for the first time since COVID"],
+    "font": "Source Sans 3",
+    "subtitle": ["Source: U.S. Bureau of Labor Statistics"],
+    "subtitleFont": "Source Sans 3",
+    "offset": 15
+  },
+  "layer": [
+    {
+      "data": {
+        "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/TUU10101AA01013951?startyear=2006&endyear=2025&registrationkey=744fdc31b8ec4e68ba07eac58fdbdf53",
+        "format": {
+          "type": "json",
+          "property": "Results.series[0].data",
+          "parse": {"year": "date:'%Y'", "value": "number"}
+        }
+      },
+      "transform": [
+        {"calculate": "'Socializing and communicating'", "as": "series"}
+      ],
+      "mark": {"type": "line", "point": false}
+    },
+    {
+      "data": {
+        "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/TUU10101AA01000865?startyear=2006&endyear=2025&registrationkey=744fdc31b8ec4e68ba07eac58fdbdf53",
+        "format": {
+          "type": "json",
+          "property": "Results.series[0].data",
+          "parse": {"year": "date:'%Y'", "value": "number"}
+        }
+      },
+      "transform": [{"calculate": "'Housework'", "as": "series"}],
+      "mark": {"type": "line", "point": false}
+    }
+  ],
+  "width": 300,
+  "height": 300,
+  "encoding": {
+    "x": {
+      "field": "year",
+      "type": "temporal",
+      "timeUnit": "year",
+      "axis": {
+        "title": "Year",
+        "titleColor": "#060606",
+        "titleFont": "Source Sans 3",
+        "titlePadding": 8,
+        "grid": false,
+        "labelOverlap": false,
+        "labelFlush": false
+      }
+    },
+    "y": {
+      "field": "value",
+      "scale": {"zero": false},
+      "axis": {
+        "title": "Average hours per day",
+        "titlePadding": 15,
+        "titleColor": "#060606",
+        "titleFont": "Source Sans 3",
+        "gridColor": "#efefef"
+      },
+      "type": "quantitative"
+    },
+    "color": {
+      "field": "series",
+      "type": "nominal",
+      "title": "Activity",
+      "scale": {
+        "domain": ["Socializing and communicating", "Housework"],
+        "range": ["#6B8267", "#e4572e"]
+      },
+      "legend": {"titlePadding": 8, "titleFont": "Source Sans 3"}
+    }
+  },
+  "config": {}
+}
