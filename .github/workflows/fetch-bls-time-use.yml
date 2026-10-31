@@ -9,13 +9,13 @@ jobs:
   fetch:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
       - name: Fetch series
         env:
           BLS_KEY: ${{ secrets.BLS_KEY }}
         run: |
           mkdir -p data
-          for pair in "series_a:TUU10101AA01013951" "series_b:TUU10101AA01001102"; do
+          for pair in "wk5_bls_social:TUU10101AA01013951" "wk5_bls_house:TUU10101AA01001102"; do
             name="${pair%%:*}"; id="${pair##*:}"
             curl -s "https://api.bls.gov/publicAPI/v2/timeseries/data/${id}?startyear=2006&endyear=2025&registrationkey=${BLS_KEY}" -o "tmp_${name}.json"
             if jq -e '.status=="REQUEST_SUCCEEDED"' "tmp_${name}.json" > /dev/null; then
