@@ -3,14 +3,14 @@
   "title": {
     "text": ["Housework below socializing for the first time since COVID"],
     "font": "Source Sans 3",
-    "subtitle": ["Source: U.S. Bureau of Labor Statistics"],
+    "subtitle": ["Source: American Time Use Survey, U.S. Bureau of Labor Statistics"],
     "subtitleFont": "Source Sans 3",
     "offset": 15
   },
   "layer": [
     {
       "data": {
-        "url": "data/potfolio/wk5_bls_social.json",
+        "url": "data/portfolio/wk5_bls_social.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
@@ -24,7 +24,7 @@
     },
     {
       "data": {
-        "url": "data/wk5_bls_house.json",
+        "url": "data/portfolio/wk5_bls_house.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
