@@ -10,7 +10,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/TUU10101AA01013951?startyear=2006&endyear=2025&registrationkey=744fdc31b8ec4e68ba07eac58fdbdf53",
+        "url": "data/series_a.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
@@ -24,7 +24,7 @@
     },
     {
       "data": {
-        "url": "https://api.bls.gov/publicAPI/v2/timeseries/data/TUU10101AA01000865?startyear=2006&endyear=2025&registrationkey=744fdc31b8ec4e68ba07eac58fdbdf53",
+        "url": "data/series_b.json",
         "format": {
           "type": "json",
           "property": "Results.series[0].data",
